@@ -38,8 +38,6 @@ Complex cMul(const Complex C1, const Complex C2){
 	return C;
 }
 
-
-
 double cReal(const Complex C){
 	return C.Re;
 }
@@ -66,7 +64,7 @@ double Arg(const Complex C1){
 	
 	cf = Re1/(sqrt(Re1*Re1+ Im1*Im1));
 	sf = Im1/(sqrt(Re1*Re1+ Im1*Im1));
-	/*printf("%lf %lf %lf", cf, sf, Im1/Re1);*/
+	/*No output*/
 	return atan(sf/cf);
 }
 
@@ -83,11 +81,7 @@ void Complex_Output(Complex C){
 		}
 	else printf("\n%lf%lf*i",C.Re, C.Im);
 }
-/*вывод комплексного числа 
-	узнать знак числа у мнимой части
-	вывести строку a+ib, если +
-	вывести минус a-ib, если -
-*/
+
 
 int main(){
 	Complex C1, C2, CADD;
@@ -100,6 +94,5 @@ int main(){
 	Complex_Output(cMul(C1,C2));
 	printf("\nArg(C1) = %lf", Arg(C1));
 	printf("\nMODUL(C2) = %lf", Modul(C1));
-	/*Complex_Output(C.Re, C.Im);*/
 	return 0;
 }
